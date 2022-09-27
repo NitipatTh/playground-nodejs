@@ -1,6 +1,7 @@
 const express =  require ('express');
 
 const restaurantRouter = require('./src/routes/restaurants');
+const base64Router = require('./src/routes/base64');
 
 const logger = require('./src/middleware/logger');
 
@@ -15,6 +16,7 @@ app.use(logger);
 
 //Routes
 app.use('/apis/restaurants', (restaurantRouter));
+app.use('/apis/base64', (base64Router));
 
 app.get('/', (req, res) => {
     res.send('<br><br><center><h1>Node Express playground</h1></center><center><h4>Let\'s all make the day count</h4></center>')
