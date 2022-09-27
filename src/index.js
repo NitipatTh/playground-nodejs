@@ -17,9 +17,11 @@ app.use(logger);
 app.use('/apis/restaurants', (restaurantRouter));
 
 app.get('/', (req, res) => {
-    res.send('<h1>Hello Express</h1>')
+    res.send('<br><br><center><h1>Node Express playground</h1></center><center><h4>Let\'s all make the day count</h4></center>')
 })
 
-app.listen(3000, () => {
+// connection
+const port = process.env.PORT || 3000;
+app.listen(port, () => {
     console.log('Listening to port 3000');
 })
