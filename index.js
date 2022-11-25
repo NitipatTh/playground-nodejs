@@ -21,7 +21,7 @@ app.use('/apis/base64', (base64Router));
 app.use('/apis/utils', (utilsRouter));
 
 app.get('/', (req, res) => {
-    res.send('<br><br><center><h1>Node Express playground</h1></center><center><h4>Let\'s all make the day count</h4></center>')
+    res.send('<br><br><center><h1>Node Express playground</h1></center> <center><h4>Let\'s all make the day count</h4></center>')
 })
 
 // connection
