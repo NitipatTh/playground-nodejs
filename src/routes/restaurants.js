@@ -41,7 +41,10 @@ router.delete('/:id', (req, res) => {
     const restaurantId = Number.parseInt(req.params.id, 10);
     const restaurantIndex = restaurants.findIndex((r) => r.id === restaurantId);
     restaurants.splice(restaurantIndex, 1);
-    res.sendStatus(204);
+    
+    res.status(200);
+    res.send({message: `delete restaurant id: ${req.params.id} success`});
+    // res.status(204);
 });
 
 module.exports = router;
